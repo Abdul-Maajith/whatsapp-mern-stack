@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+.app {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #dadbd3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app_body {
+    display: flex;
+    background-color: #ededed;
+    margin-top: -50px;
+    height: 90vh;
+    width: 90vw;
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 0.35;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.side_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-right: 1px solid lightgray;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar_headerRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 10vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar_headerRight > .MuiSvgIcon-root {
+    margin-right: 2vw;
+    font-size: 24px !important;
+}
+
+.sidebar_search {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    height: 45px;
+    padding: 10px;
+}
+
+.sidebar_searchContainer {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 35px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sidebar_searchContainer > .MuiSvgIcon-root {
+    color: gray;
+    font-size: 24px !important;
+    padding: 2px;
+}
+
+.searchInput {
+    width: 80%;
+}
+
+.sidebar_searchContainer > input {
+    border: none;
+    margin-left: 1px;
+    outline-width: 0;
+}
+
+.sidebarChat {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.sidebarChat:hover {
+    background-color: #ebebeb;
+}
+
+.sidebar_chats {
+    flex: 1;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.sidebarChat_info > h2 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.sidebarChat_info > p {
+    font-size: 13px;
+}
+
+.sidebarChat_info {
+    margin-left: 15px;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    flex: 0.65;
+}
+
+.chat_body::-webkit-scrollbar {
+  display: none;
+}
+
+.chat_header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.chat_headerInfo {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.chat_headerInfo > h3{
+    font-size: 15px;
+}
+
+.chat_headerInfo > p{
+    font-size: 13px;
+    color: gray;
+}
+
+.chat_body {
+    flex: 1;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-repeat: repeat;
+    background-position: center;
+    padding: 30px;
+    overflow: scroll;
+}
+
+.chat_message {
+    position: relative;
+    font-size: 14px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.chat_timeStamp {
+    margin-left: 10px;
+    font-size: xx-small;
+}
+
+.chat_name {
+    position: absolute;
+    top: -15px;
+    font-weight: 800;
+    font-size: xx-small;
+}
+
+.chat_receiver {
+    margin-left: auto;
+    background-color: #dcf8c6;
+    font-size: 14px;
+}
+
+.chat_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-top: 1px solid lightgray;
+}
+
+.chat_footer > form {
+    display: flex;
+    flex: 1;
+}
+
+.chat_footer > form > input{
+    flex: 1;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    outline-width: 0;
+}
+
+.chat_footer > form > button{
+    display: none;
+}
+
+.chat_footer  > .MuiSvgIcon-root {
+    color: gray;
+    padding: 2px;
+    font-size: 30px;
 }
