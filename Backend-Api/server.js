@@ -30,7 +30,7 @@ app.use(Cors());
 
 // DB config
 const connectionUrl =
-  "mongodb+srv://whatsappadmin:6142vCnRlLCYW9ew@cluster0.1nirp.mongodb.net/WhatsappDatabase?retryWrites=true&w=majority";
+  "";
 mongoose.connect(connectionUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
